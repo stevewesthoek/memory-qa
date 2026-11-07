@@ -1,0 +1,25 @@
+{
+	"name": "memory-qa-cli",
+	"version": "0.1.0",
+	"private": true,
+	"license": "Apache-2.0",
+	"type": "module",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"bin": {
+		"memory-qa": "./dist/index.js",
+		"prochat": "./dist/index.js"
+	},
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"build": "tsc -b",
+		"typecheck": "tsc -b --pretty false",
+		"test": "vitest run"
+	},
+	"dependencies": {
+		"memory-qa-core": "0.1.0"
+	},
+	"description": "CLI for local QA investigation memory."
+}

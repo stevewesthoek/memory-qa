@@ -1,0 +1,36 @@
+{
+	"name": "memory-qa",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Local-first QA investigation memory for recurring test failures, regression analysis, and reusable engineering knowledge.",
+	"license": "Apache-2.0",
+	"type": "module",
+	"workspaces": [
+		"packages/core",
+		"packages/cli",
+		"packages/mcp"
+	],
+	"scripts": {
+		"build": "tsc -b",
+		"lint": "biome lint packages/core/src packages/core/test packages/cli/src packages/cli/test packages/mcp/src packages/mcp/test",
+		"format": "biome format --write biome.json package.json tsconfig.json packages/core/package.json packages/core/tsconfig.json packages/core/src packages/core/test packages/cli/package.json packages/cli/tsconfig.json packages/cli/src packages/cli/test packages/mcp/package.json packages/mcp/tsconfig.json packages/mcp/src packages/mcp/test",
+		"format:check": "biome format biome.json package.json tsconfig.json packages/core/package.json packages/core/tsconfig.json packages/core/src packages/core/test packages/cli/package.json packages/cli/tsconfig.json packages/cli/src packages/cli/test packages/mcp/package.json packages/mcp/tsconfig.json packages/mcp/src packages/mcp/test",
+		"quality": "npm run lint && npm run format:check",
+		"typecheck": "tsc -b --pretty false",
+		"test": "vitest run",
+		"test:watch": "vitest",
+		"clean": "tsc -b --clean",
+		"validate:clean": "npm run clean && npm run quality && npm run typecheck && npm test",
+		"install:deps": "npm install --ignore-scripts"
+	},
+	"engines": {
+		"node": ">=22.13.0"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "2.5.1",
+		"@types/node": "^22.15.0",
+		"typescript": "^5.8.3",
+		"vite": "^7.3.7",
+		"vitest": "^4.1.12"
+	}
+}

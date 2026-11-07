@@ -1,0 +1,39 @@
+# Dependencies
+node_modules/
+
+# Build output and TypeScript caches
+dist/
+**/dist/
+*.tsbuildinfo
+.cache/
+**/.cache/
+coverage/
+**/coverage/
+
+# Local databases and indexes
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+
+# Local environment and secrets
+.env
+.env.*
+*.key
+*.pem
+*.p12
+*.pfx
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/settings.json
+.idea/
+
+# Logs and temporary files
+*.log
+*.tmp
+
+# Host-generated Finder metadata
+**/.DS_Store
