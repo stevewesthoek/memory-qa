@@ -14,7 +14,7 @@ This repository is the standalone Memory QA source project. It starts a clean Gi
 2. Keep customer data, credentials, private URLs, and confidential QA evidence out of issues, commits, and pull requests.
 3. Run `npm ci --ignore-scripts`, `npm run validate:clean`, `npm run build`, and `npm audit --audit-level=low`.
 4. Check the README commands and the synthetic workflow from workspace initialization through reviewed-memory retrieval.
-5. Merge only after the GitHub Actions checks pass. The CI matrix covers Ubuntu with Node.js 22.13.0, 24.x, and 26.x.
+5. Merge only after the GitHub Actions checks pass. The CI matrix covers Ubuntu with Node.js 22.16.0, 24.x, and 26.x.
 
 ## Versioned releases
 

@@ -37,7 +37,7 @@ See [architecture](docs/ARCHITECTURE.md) and [privacy and safety](docs/PRIVACY-A
 
 ## Requirements and setup
 
-- Node.js 22.13.0 or newer
+- Node.js 22.16.0 or newer
 - npm
 - No database service or AI provider account is required for local use.
 
@@ -74,7 +74,7 @@ This flow uses a local workspace and synthetic input. Review all drafts before a
     npm run validate:clean
     npm run build
 
-The GitHub Actions workflow validates on Ubuntu with Node.js 22.13.0, 24.x, and 26.x, then audits dependencies.
+The GitHub Actions workflow validates on Ubuntu with Node.js 22.16.0, 24.x, and 26.x, then audits dependencies.
 
 This clean source tree begins the independently maintained Memory QA project. See the [release process](docs/RELEASING.md) for versioning and release checks.
 

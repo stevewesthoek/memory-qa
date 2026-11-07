@@ -22,7 +22,7 @@ This is a proposed backlog based on current source behavior. It is not a commitm
 
 **Problem:** The project has no evidence-based operating-system support statement.
 
-**Evidence:** .github/workflows/ci.yml runs on Ubuntu with Node.js 22.13.0, 24.x, and 26.x. Local validation has been performed on macOS; the prepared workflow has not run on GitHub or on Windows.
+**Evidence:** .github/workflows/ci.yml runs on Ubuntu with Node.js 22.16.0, 24.x, and 26.x. Local validation has been performed on macOS. The workflow has not been run on Windows.
 
 **Outcome:** Documentation names only operating systems and Node.js versions that pass the complete workflow.
 
@@ -102,7 +102,7 @@ This is a proposed backlog based on current source behavior. It is not a commitm
 
 **Problem:** The project does not yet state how long it will support beta workspace metadata and the former CLI alias.
 
-**Evidence:** package.json declares Node.js >=22.13.0. packages/cli/package.json retains the prochat command alias, and packages/core/src/workspace.ts uses the .prochat metadata directory. These names exist for prior beta workspaces.
+**Evidence:** package.json declares Node.js >=22.16.0. packages/cli/package.json retains the prochat command alias, and packages/core/src/workspace.ts uses the .prochat metadata directory. These names exist for prior beta workspaces.
 
 **Outcome:** Users know tested runtimes and how compatibility changes will affect existing workspaces.
 
